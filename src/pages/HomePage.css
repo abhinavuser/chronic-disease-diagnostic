@@ -1,0 +1,120 @@
+/* Overall Page Styling */
+.home {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    text-align: center;
+    padding: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('https://udaylunawat.github.io/images/backgrounds/lines.webp') no-repeat center center fixed;
+    background-size: cover;
+      
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+  
+  select {
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    border: 2px solid #4A90E2;
+    background: #fff;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease;
+  }
+  
+  select:focus {
+    border-color: #0056b3;
+    outline: none;
+  }
+  
+  .disease-info {
+    margin: 30px auto;
+    padding-left: 200px;
+    padding-right: 200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 100%;
+    font-size: large;
+  }
+  
+  .disease-info h2 {
+    color: #4A90E2;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px auto;
+  }
+  
+  ul li {
+    background: #e9f0f5;
+    padding: 15px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin: 5px 0;
+    border-radius: 8px;
+  }
+  
+  form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="file"] {
+    margin: 20px 0;
+  }
+  
+  button {
+    padding: 15px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    background-color: #4A90E2;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+   
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home {
+      padding: 20px;
+    }
+    
+    select, input[type="file"], button {
+      width: 100%;
+      font-size: 1em;
+      padding: 10px;
+    }
+  
+    .disease-info {
+      padding: 15px;
+    }
+  }
+  
