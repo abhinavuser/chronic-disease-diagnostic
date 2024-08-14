@@ -1,49 +1,82 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #4A90E2;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #4A90E2, #0074D9);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d1e0e0;
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #4A90E2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.dropdown-content li {
+  padding: 8px 16px;
+}
+
+.dropdown-content li:hover {
+  background-color: #0074D9;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .logo {
-    height: 60px;
-    transition: transform 0.3s ease;
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .logo:hover {
-    transform: scale(1.1);
+
+  .dropdown-content {
+    position: static;
   }
-  
-  nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #d1e0e0;
-    text-shadow: 0 1px 5px rgba(255,255,255,0.5);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    
-    nav {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  
+}

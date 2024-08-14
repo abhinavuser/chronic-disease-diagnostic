@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Header.css';
 
 const UploadReportForm = () => {
   const [file, setFile] = useState(null);
@@ -27,7 +28,7 @@ const UploadReportForm = () => {
       <h2>Upload Lab Report</h2>
       <form onSubmit={uploadReport}>
         <div>
-          <label htmlFor="file">Choose file:</label>
+          <label className="submit" htmlFor="file">Choose file:</label>
           <input type="file" id="file" onChange={onFileChange} required />
         </div>
         <button type="submit">Submit</button>

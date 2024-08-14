@@ -1,0 +1,28 @@
+.results-container {
+    padding: 50px;
+    background: #f5f7fa;
+    color: #333;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .result-card {
+    background-color: #4A90E2;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 600px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .result-card:hover {
+    transform: scale(1.05);
+    background-color: #0074D9;
+  }
+  
+  .result-card h2 {
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,22 @@
+[
+    {
+        "ELISA_Result": 1,
+        "CD4_Count": 450,
+        "HIV_RNA_PCR": 50
+    },
+    {
+        "ELISA_Result": 0,
+        "CD4_Count": 600,
+        "HIV_RNA_PCR": 10
+    },
+    {
+        "ELISA_Result": 1,
+        "CD4_Count": 150,
+        "HIV_RNA_PCR": 1000
+    },
+    {
+        "ELISA_Result": 0,
+        "CD4_Count": 300,
+        "HIV_RNA_PCR": 5
+    }
+]

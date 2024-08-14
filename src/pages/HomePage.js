@@ -1,29 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './HomePage.css';
 
 const HomePage = () => {
   const [selectedDisease, setSelectedDisease] = useState('');
   const [file, setFile] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const diseases = {
     diabetes: {
       symptoms: ['Increased thirst', 'Frequent urination', 'Extreme hunger'],
-      datasets: ['Blood glucose', 'HbA1c']
+      datasets: ['Blood glucose', 'HbA1c'],
+      img: 'https://via.placeholder.com/300x150?text=Diabetes',
     },
     alzheimers: {
       symptoms: ['Memory loss', 'Difficulty planning', 'Confusion'],
-      datasets: ['MRI', 'PET scan']
+      datasets: ['MRI', 'PET scan'],
+      img: 'https://via.placeholder.com/300x150?text=Alzheimers',
     },
     tuberculosis: {
       symptoms: ['Coughing', 'Chest pain', 'Weight loss'],
-      datasets: ['Sputum test', 'Chest X-ray']
+      datasets: ['Sputum test', 'Chest X-ray'],
+      img: 'https://via.placeholder.com/300x150?text=Tuberculosis',
     },
     hiv: {
       symptoms: ['Fever', 'Fatigue', 'Swollen lymph nodes'],
-      datasets: ['ELISA', 'Western blot']
-    }
+      datasets: ['ELISA', 'Western blot'],
+      img: 'https://via.placeholder.com/300x150?text=HIV',
+    },
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % Object.keys(diseases).length);
+    }, 3000); // Change slide every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   const handleDiseaseChange = (e) => {
     setSelectedDisease(e.target.value);
@@ -54,6 +66,19 @@ const HomePage = () => {
     <div className="home">
       <h1>Welcome to the Chronic Disease Diagnostic Tool</h1>
       <p>Upload your lab reports to get a diagnosis.</p>
+
+      <div className="slideshow">
+        {Object.keys(diseases).map((disease, index) => (
+          <div
+            key={disease}
+            className={`slide ${index === currentSlide ? 'active' : ''}`}
+          >
+            <img src={diseases[disease].img} alt={disease} />
+            <h2>{disease.charAt(0).toUpperCase() + disease.slice(1)}</h2>
+          </div>
+        ))}
+      </div>
+
       <select onChange={handleDiseaseChange} value={selectedDisease}>
         <option value="">-Select Disease-</option>
         {Object.keys(diseases).map((disease) => (
