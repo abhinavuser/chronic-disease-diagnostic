@@ -11,29 +11,29 @@ const HomePage = () => {
     diabetes: {
       symptoms: ['Increased thirst', 'Frequent urination', 'Extreme hunger'],
       datasets: ['Blood glucose', 'HbA1c'],
-      img: 'https://via.placeholder.com/300x150?text=Diabetes',
+      img: 'https://wallpapercave.com/wp/wp2616571.jpg',
     },
     alzheimers: {
       symptoms: ['Memory loss', 'Difficulty planning', 'Confusion'],
       datasets: ['MRI', 'PET scan'],
-      img: 'https://via.placeholder.com/300x150?text=Alzheimers',
+      img: 'https://th.bing.com/th/id/OIP.5vKLsanxy-EbmAjvEbYcKQHaE8?rs=1&pid=ImgDetMain',
     },
     tuberculosis: {
       symptoms: ['Coughing', 'Chest pain', 'Weight loss'],
       datasets: ['Sputum test', 'Chest X-ray'],
-      img: 'https://via.placeholder.com/300x150?text=Tuberculosis',
+      img: 'https://images.onlymyhealth.com/imported/images/2023/October/04_Oct_2023/main%20image-image-tuberculosis.jpg',
     },
     hiv: {
       symptoms: ['Fever', 'Fatigue', 'Swollen lymph nodes'],
       datasets: ['ELISA', 'Western blot'],
-      img: 'https://via.placeholder.com/300x150?text=HIV',
+      img: 'https://th.bing.com/th/id/OIP.QUXBXHU9Ocg2iwqfYJBkzgHaE6?rs=1&pid=ImgDetMain',
     },
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % Object.keys(diseases).length);
-    }, 3000); // Change slide every 3 seconds
+    }, 2000); // Change slide every 3 seconds
     return () => clearInterval(interval);
   }, []);
 
