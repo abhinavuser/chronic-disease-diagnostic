@@ -1,0 +1,87 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure the body and html cover the full height of the screen */
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Home Section covers full viewport */
+  .home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1a1a1a; /* Or set a background image if needed */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    color: white;
+    position: relative;
+    overflow: hidden; /* Prevents unwanted scrollbars */
+  }
+  
+  /* Social Media Icons */
+  .social-media-icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Align vertically to match header height */
+    top: 50%; /* Set top at 50% to vertically center the icons */
+    transform: translateY(-50%); /* Adjust with translate to ensure exact centering */
+    left: 20px; /* Place on the left side */
+  }
+  
+  .icon-placeholder {
+    width: 100px;
+    height: 30px;
+    background-color: transparent; /* Remove white background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  /* Header Text */
+  .header h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #ccc;
+    margin-bottom: 50px;
+  }
+  
+  /* Main Message */
+  .main-message h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .typewriter-effect {
+    font-size: 48px;
+    font-weight: 700;
+    color: #007bff;
+  }
+  
+  /* Scroll Down Arrow */
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+  }
+  
+  .scroll-down .icon-placeholder {
+    width: 150px;
+    height: 40px;
+    background-color: transparent; /* Remove white background */
+    color: #007bff; /* Scroll down arrow color */
+    font-size: 24px;
+    text-align: center;
+  }
+  

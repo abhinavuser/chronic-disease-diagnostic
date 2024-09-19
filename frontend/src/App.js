@@ -1,25 +1,30 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import HomePage from './pages/HomePage';
+import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Dashboard from './pages/Dashboard';
-import UploadReportPage from './pages/UploadReportPage';
-import ResultsPage from './pages/ResultsPage';
+import Home from './pages/Home';
+import Diseases from './pages/Diseases';
+import Diabetes from './pages/diseases/Diabetes';
+import Alzheimer from './pages/diseases/Alzheimer';
+import Tuberculosis from './pages/diseases/Tuberculosis';
+import HIV from './pages/diseases/HIV';
 import './App.css';
+
 
 function App() {
   return (
     <Router>
-      <Header />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/upload-report" element={<UploadReportPage />} />
-        <Route path="/results" element={<ResultsPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Diseases" element={<Diseases />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="/diseases/Diabetes" element={<Diabetes />} />
+        <Route path="/diseases/Alzheimer" element={<Alzheimer />} />
+        <Route path="/diseases/Tuberculosis" element={<Tuberculosis />} />
+        <Route path="/diseases/HIV" element={<HIV />} />
       </Routes>
     </Router>
   );
